@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+        div{
+            border:1px solid #000;
+            background: green;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+<div class="box"></div>
+<div class="box"></div>
+</body>
+
+<script type="text/javascript">
+    window.onload = function(){
+        //选择所有的div元素
+        var items = document.querySelectorAll(".box");
+        //把items的伪数组转化为真数组
+        var divs = Array.prototype.slice.apply(items);
+        //遍历所有的div,为每个div元素绑定onclick事件
+        for(var i=0;i<divs.length;i++){
+            (function (i) {
+                //在立即执行函数中，遍历所有的div,为每一个div元素绑定onclick事件
+                item[i].onclick=function () {
+                    alert(i)
+                }
+
+            })(i)
+        }
+    }
+</script>
+</html>
+
+
+//闭包的产生
+<!--
+闭包其本质是一个c++的对象,其产生必须具备以下条件：
+
+外部函数（或者叫做包裹函数）必须被调用
+外部函数中内部函数已经被定义（声明）
+内部函数必须引用了外部函数作用域中的变量-->
