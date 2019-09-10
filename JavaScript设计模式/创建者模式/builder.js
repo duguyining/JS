@@ -3,7 +3,7 @@ var Human=function (param) {
     //技能
     this.skill=param&&param.skill||'保密';
     //兴趣爱好
-    this.hobby=param&&param.hobb||'保密';
+    this.hobby=param&&param.hobby||'保密';
 };
 
 //类人原型方法
