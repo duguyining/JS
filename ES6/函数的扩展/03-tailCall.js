@@ -13,4 +13,4 @@ function factorial(n,total) {
     return factorial(n-1,n*total);
 }
 
-console.log(factorial(5, 1));;
+console.log(factorial(5, 1));
