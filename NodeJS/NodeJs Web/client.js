@@ -14,7 +14,6 @@ var callback = function(response){
     response.on('data', function(data) {
         body += data;
     });
-
     response.on('end', function() {
         // 数据接收完成
         console.log(body);
