@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>canvas</title>
+	</head>
+	<body>
+		<!-- 加上红色标签 -->
+		<canvas id="myCanvas" width="400px" height="300px">
+			不支持该标签
+		</canvas>
+		
+		<script type="text/javascript">
+			//获取画布
+			var canvas=document.getElementById("myCanvas");
+			var ctx=canvas.getContext("2d");
+			
+			//开始一个新的绘制路径
+			ctx.beginPath();
+			//设置颜色为蓝色
+			ctx.strokeStyle='blue';
+			var circle={
+				x:100,
+				y:100,
+				r:50
+			};
+			//顺时针
+			ctx.arc(circle.x, circle.y, circle.r, 0, Math.PI * 2, false);
+			ctx.stroke();
+		</script>
+	</body>
+</html>
